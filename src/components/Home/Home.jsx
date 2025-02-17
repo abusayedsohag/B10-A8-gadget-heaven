@@ -1,8 +1,5 @@
-import { act, useEffect, useState } from "react";
 import Banner from "../Banner/Banner";
 import Catagories from "../Catagories/Catagories";
-import Products from "../Products/Products";
-import Categories from '../../../public/Categories.json'
 import { Outlet, useLoaderData } from "react-router-dom";
 
 const Home = () => {

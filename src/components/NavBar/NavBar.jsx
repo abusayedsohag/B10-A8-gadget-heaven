@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import shopping from '../../../public/shopping.svg'
 import whishlist from '../../../public/whishlist.svg'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { cartContext, wishlistContext } from '../Root/Root';
 
 const NavBar = () => {
@@ -10,8 +10,11 @@ const NavBar = () => {
     const [cart] = useContext(cartContext);
     const [wishlist] = useContext(wishlistContext);
 
+    const location = useLocation();
+    const homePage = location.pathname === "/";
+
     return (
-        <div className="navbar bg-purple-600 text-white rounded-t-2xl w-[98%] px-16 mx-auto mt-4">
+        <div className={` navbar   rounded-t-2xl w-[98%] px-16 mx-auto ${homePage ? "bg-purple-600 text-white mt-4": ""} `}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
