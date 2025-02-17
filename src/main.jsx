@@ -11,6 +11,7 @@ import Home from './components/Home/Home';
 import Dashboard from './components/Dashboard/Dashboard';
 import Products from './components/Products/Products';
 import ProductDetails from './components/ProductDetails/ProductDetails';
+import Statistics from './components/Statistics/Statistics';
 
 const router = createBrowserRouter([
   {
@@ -22,24 +23,29 @@ const router = createBrowserRouter([
         path: '/',
         element: <Home></Home>,
         errorElement: <ErrorPage></ErrorPage>,
-        loader:()=>fetch(`../Categories.json`),
-        children:[
+        loader: () => fetch(`../Categories.json`),
+        children: [
           {
-            path:'/',
+            path: '/',
             element: <Products></Products>,
-            loader:()=>fetch(`../products.json`),
+            loader: () => fetch(`../products.json`),
           },
           {
-            path:'/category/:categoryname',
-            element:<Products></Products>,
-            loader:() => fetch(`../products.json`),
+            path: '/category/:categoryname',
+            element: <Products></Products>,
+            loader: () => fetch(`../products.json`),
           }
         ]
       },
       {
         path: 'productDetails/:productname',
         element: <ProductDetails></ProductDetails>,
-        loader: ()=> fetch(`../products.json`),
+        loader: () => fetch(`../products.json`),
+      },
+      {
+        path: 'statistics',
+        element: <Statistics></Statistics>,
+        loader: () => fetch(`../products.json`),
       },
       {
         path: 'dashboard',

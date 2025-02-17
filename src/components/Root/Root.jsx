@@ -12,8 +12,8 @@ const Root = () => {
     const [wishlist, setWishlist] = useState([]);
 
     return (
-        <wishlistContext.Provider value= {[cart, setCart]} >
-            <cartContext.Provider value = {[wishlist, setWishlist]} >
+        <wishlistContext.Provider value={[cart, setCart]} >
+            <cartContext.Provider value={[wishlist, setWishlist]} >
                 <div>
                     <NavBar></NavBar>
                     <Outlet></Outlet>

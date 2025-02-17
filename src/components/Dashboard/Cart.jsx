@@ -57,7 +57,7 @@ const Cart = () => {
                 <div className="flex gap-6 items-center">
                     <h1 className="text-2xl font-bold">Total Cost : {totalPrice}</h1>
                     <button onClick={handlePriceSort} className="btn rounded-full text-purple-600 border-purple-600">Sort by Price <img src={sortIcon} alt="" /></button>
-                    <button disabled={cart.length < 1} onClick={()=> handlePurchase(totalPrice)} className="btn rounded-full text-white bg-gradient-to-b from-purple-600 to-slate-400">Purchase</button>
+                    <button disabled={cart.length < 1} onClick={() => handlePurchase(totalPrice)} className="btn rounded-full text-white bg-gradient-to-b from-purple-600 to-slate-400">Purchase</button>
                 </div>
             </div>
 
