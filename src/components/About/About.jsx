@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const About = () => {
+
+
+     useEffect(() => {
+            document.title = "Gadget Heaven || About";
+        }, []);
+
+
     return (
         <div>
             <div className="bg-purple-600 py-8 flex justify-center flex-col items-center gap-4">
