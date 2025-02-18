@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import Cart from './Cart';
 import Wishlist from './Wishlist';
-import { cartContext, wishlistContext } from '../Root/Root';
 
 
 const Dashboard = () => {
@@ -10,9 +9,6 @@ const Dashboard = () => {
     useEffect(() => {
         document.title = "Gadget Heaven || Dashboard";
     }, []);
-
-
-    const [wishlist] = useContext(wishlistContext);
 
 
     const [active, setActive] = useState('cart');

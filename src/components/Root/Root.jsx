@@ -11,6 +11,7 @@ const Root = () => {
     const [cart, setCart] = useState([]);
     const [wishlist, setWishlist] = useState([]);
 
+
     return (
         <wishlistContext.Provider value={[cart, setCart]} >
             <cartContext.Provider value={[wishlist, setWishlist]} >

@@ -24,7 +24,7 @@ const Statistics = () => {
                     <ResponsiveContainer width="90%" height={400}>
                         <BarChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 50 }}>
                             <XAxis dataKey="name" angle={-20} textAnchor="end" />
-                            <YAxis />
+                            <YAxis/>
                             <Tooltip />
                             <Legend />
 
